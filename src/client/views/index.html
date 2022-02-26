@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Travel App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div class="holder headline">
+            Travel Planner
+        </div>
+        <div class="holder city">
+            <label for="city">My trip to:</label>
+            <input type="text" id="city" placeholder="enter destination">
+        </div>
+        <div class="holder startDate">
+            <label for="startDate">Date of Departure:</label>
+            <input id="startDate" placeholder="MM/DD/YYYY"></input>
+        </div>
+        <div class="holder endDate">
+            <label for="endDate">Date of Return:</label>
+            <input id="endDate" placeholder="MM/DD/YYYY"></input>
+        </div>
+        <button id="save" type="submit"> save </button><br>
+        <button id="remove" type="submit"> remove </button>
+        <div class="holder entry">
+            <div class="title">Most Recent entry trip:</div>
+            <div id="entryHolder">
+                <div id="daysmatterinfo"></div>
+                <div id="tripDays"></div>
+                <div id="weatherinfo"></div>
+            </div>
+        </div>
+        <img id="myp" src="#" alt="city pic unavailable"></img>
+    </div>
+    <script>
+        // Check that service workers are supported
+        
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
