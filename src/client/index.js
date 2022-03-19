@@ -35,7 +35,6 @@ document.getElementById('remove').addEventListener('click', removeAction);
 function removeAction(i) {
     document.querySelector('#daysmatterinfo').innerHTML = "";
     document.querySelector('#weatherinfo').innerHTML = "";
-    document.querySelector('#tripDays').innerHTML = "";
-    //document.querySelector('#myp').innerHTML = "";
+    document.querySelector('#tripDays').innerHTML = "";    
     document.getElementById('myp').src = "";
 };

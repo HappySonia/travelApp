@@ -121,9 +121,11 @@ async function postData(req, res) {
     res.send(projectData);
     console.log(projectData);
 }
-try { console.log('everything is good') } catch (error) {
-    console.log("postData function is not completed", error);
-};
+try { 
+        console.log('everything is good') 
+    } catch (error) {
+        console.log("postData function is not completed", error);
+    };
 
 // GET route
 app.get('/all', sendData);
